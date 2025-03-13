@@ -1,0 +1,423 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(./font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "DotSans";
+  src: url(./font/42dot_Sans/42dotSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Jua";
+  src: url(./font/Jua/Jua-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background-color: #679467;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hd_category_title {
+  display: none;
+}
+
+.hd_title {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-weight: 500;
+}
+
+main {
+  width: 100%;
+  background-color: #f5f5f5;
+  /* background-color: #94eb3e; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.main_introduce_area,
+.main_skills_area,
+.main_project_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill_content {
+  height: 100px;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main_introduce_area {
+  justify-content: stretch;
+}
+
+.short_me {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.name {
+  margin: 10px 0px;
+  color: #679467;
+}
+
+.introduce_me {
+  color: #83838b;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.introduce_top {
+  display: flex;
+  flex-direction: row;
+}
+
+.intro_left_aside_area {
+  display: flex;
+  flex-direction: column;
+  font-family: "Jua";
+  justify-content: space-around;
+  box-sizing: content-box;
+  padding: 5px;
+}
+
+.intro_right_aside_area {
+  display: none;
+  /* width: 500px;
+  height: 400px;
+  background-color: lightsalmon;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.user_img {
+  border-radius: 50%;
+}
+
+.introduce_bottom {
+  display: flex;
+  flex-direction: row;
+  box-sizing: content-box;
+  padding: 5px;
+}
+
+.web_icon {
+  margin: 5px;
+}
+
+.web_icon > a > img,
+.skill_icon {
+  height: 50px;
+  width: 50px;
+}
+
+.skill_item {
+  display: none;
+}
+
+.skill_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 55px;
+  height: 55px;
+  margin: 10px;
+}
+
+.skill_title,
+.project_title {
+  font-family: "Montserrat";
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.main_introduce_area,
+.main_skills_area,
+.main_project_area {
+  width: 100%;
+}
+
+.project_content {
+  box-sizing: content-box;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "DotSans";
+  font-size: 24px;
+}
+
+.company_project,
+.side_project {
+  margin: 5px;
+  width: 100%;
+  /* 
+  margin-bottom: 15px;
+  */
+}
+
+tr,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+th {
+  font-weight: 400;
+  width: 180px;
+}
+
+td {
+  font-weight: 100;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  /* background-color: #5d8a5d; */
+  background-color: #679467;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 3px 10px 3px 0px;
+}
+
+.footer_copyright {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* 아코디언 css */
+.faq_container {
+  width: 100%;
+  /* background-color: #679467; */
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 5px auto;
+  padding: 5px;
+  list-style: none;
+}
+
+.faq {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq_question {
+  padding: 14px;
+}
+
+.faq_title {
+  margin: 0;
+  font-size: 21px;
+}
+
+.faq_answer {
+  max-height: 0;
+  height: 500px;
+  overflow: auto;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.faq.active .faq_answer {
+  max-height: 200px;
+  border-top: 1px solid silver;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.faq_btn {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: 0;
+  border-radius: 50%;
+  font-size: 21px;
+}
+
+.faq_btn:focus {
+  outline: 0;
+}
+
+.faq_icon.close {
+  display: none;
+}
+
+.faq.active .faq_icon.close {
+  color: #000;
+  display: block;
+}
+
+.faq.active .faq_icon.open {
+  display: none;
+}
+
+/* 세로모드 모바일 디바이스 ( 해상도가 576px 보다 큰 화면 ) */
+@media (min-width: 576px) {
+  main {
+    align-items: center;
+  }
+
+  .hd_title {
+    display: none;
+  }
+
+  .header_category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hd_category_title:nth-child(even) {
+    margin: 0px 10px;
+  }
+
+  .hd_category_title {
+    display: block;
+    color: white;
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .main_introduce_area,
+  .main_skills_area,
+  .main_project_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* box-sizing: content-box; */
+    padding: 5px;
+  }
+
+  .short_me {
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  .intro_right_aside_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .introduce_me {
+    color: #83838b;
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .skill_item {
+    display: block;
+  }
+
+  .skill_content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .skill_title,
+  .project_title {
+    font-family: "Montserrat";
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  .skill_box {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+}
+
+/* 가로모드 모바일 디바이스 ( 해상도가 768px 보다 큰 화면 ) */
+@media (min-width: 768px) {
+  .hd_title {
+    display: none;
+  }
+
+  .skill_box {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+  }
+}
+
+/* 태블릿 디바이스 ( 해상도가 992px 보다 큰 화면 ) */
+@media (min-width: 992px) {
+}
+
+/* 데스크탑 ( 해상도가 1200px 보다 큰 화면 ) */
+@media (min-width: 1200px) {
+  .main_introduce_area,
+  .main_skills_area,
+  .main_project_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .introduce_top {
+    display: flex;
+    justify-content: center;
+  }
+}

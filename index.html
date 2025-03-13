@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Who is jin</title>
+  </head>
+  <body>
+    <header>
+      <div class="header_category">
+        <span class="hd_title">jin's portfolio</span>
+        <span class="hd_category_title">About Me&nbsp;</span>
+        <span class="hd_category_title">Skill&nbsp;</span>
+        <span class="hd_category_title">Project</span>
+      </div>
+    </header>
+    <main>
+      <div class="main_introduce_area">
+        <div class="introduce_top">
+          <div class="intro_left_aside_area">
+            <div class="short_me">
+              <p>소통하는 개발자</p>
+              <p class="name">임수진</p>
+              <p>입니다.</p>
+            </div>
+            <div class="introduce_me">
+              협업을 하면서 같이 일하게 되는 팀원들과 의견을 나누며 트여진
+              생각으로 개발을 하려고 합니다.
+            </div>
+            <div class="introduce_bottom">
+              <div class="web_icon">
+                <a
+                  href="https://study-for-developer.tistory.com"
+                  id="footerATag"
+                >
+                  <img src="./images/icons/t_story.svg" alt="blog"
+                /></a>
+              </div>
+              <div class="web_icon">
+                <a href="https://github.com/jinsu009" id="footerATag">
+                  <img src="./images/icons/git_icon.svg" alt="git"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="intro_right_aside_area">
+            <img
+              class="user_img"
+              src="./images/portfolio_img.png"
+              alt="sample_image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="main_skills_area">
+        <div class="skill_title">Skills</div>
+        <div class="skill_content" id="skills"></div>
+      </div>
+      <div class="main_project_area">
+        <div class="project_title">Project</div>
+
+        <!-- 모바일 사이즈 - 아코디언 -->
+        <ul class="faq_container"></ul>
+        <!-- 일반 -->
+        <div class="project_content" id="project"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_copyright">
+        <p class="footer_email">jinjinsu_009@daum.net</p>
+      </div>
+    </footer>
+    <script src="./data/project.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
