@@ -96,6 +96,33 @@ const selectSkill = () => {
   });
 };
 selectSkill();
+//-------------
+
+const introSection = document.getElementById("introSection");
+const skillSection = document.getElementById("skillSection");
+const projectSection = document.querySelector("#projectSection");
+
+document.getElementById("hdMe").addEventListener("click", () => {
+  document.body.scrollTo({
+    left: 0,
+    top: introSection.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
+document.getElementById("hdSkill").addEventListener("click", () => {
+  document.body.scrollTo({
+    left: 0,
+    top: skillSection.getBoundingClientRect().top - 100,
+    behavior: "smooth",
+  });
+});
+document.querySelector("#hdProject").addEventListener("click", () => {
+  document.body.scrollTo({
+    left: 0,
+    top: projectSection.getBoundingClientRect().top + window.scrollY,
+    behavior: "smooth",
+  });
+});
 
 //-------------
 
