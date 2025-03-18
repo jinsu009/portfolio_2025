@@ -2,7 +2,7 @@ const total_project = [
   {
     type: "company",
     project_name: "제품 개발 - TACHYON Linux Security",
-    period: "0000-00-00 ~ 0000-00-00",
+    period: "2021.03 ~ 2022.05",
     contribution: "10%",
     stack: [
       "java",

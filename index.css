@@ -19,6 +19,13 @@
   box-sizing: border-box;
 }
 
+p,
+.skill_title,
+.skill_item,
+.project_title {
+  color: #3e3e3e;
+}
+
 body,
 html {
   width: 100%;
@@ -41,10 +48,26 @@ header {
 }
 
 .hd_title {
-  color: white;
+  color: #c7e9c0;
   font-family: "Montserrat";
   font-size: 30px;
   font-weight: 500;
+}
+
+.hd_me,
+.hd_skill,
+.hd_project {
+  /* color: #c7e9c0; */
+  color: #a1d99b;
+}
+
+.hd_me:hover,
+.hd_skill:hover,
+.hd_project:hover {
+  /* color: #f7fcf5; */
+  color: #00441b;
+  /* color: #e5f5e0; */
+  font-weight: 700;
 }
 
 main {
@@ -61,7 +84,26 @@ main {
 .main_project_area {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.main_skills_area,
+.main_project_area {
   justify-content: center;
+}
+
+.main_introduce_area {
+  justify-content: stretch;
+  margin: 10px 0px;
+}
+
+.main_skills_area {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.main_project_area {
+  margin: 10px 0x;
 }
 
 .skill_content {
@@ -70,10 +112,6 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.main_introduce_area {
-  justify-content: stretch;
 }
 
 .short_me {
@@ -158,12 +196,6 @@ main {
   font-weight: 600;
 }
 
-.main_introduce_area,
-.main_skills_area,
-.main_project_area {
-  width: 100%;
-}
-
 .project_content {
   box-sizing: content-box;
   padding: 5px;
@@ -177,11 +209,15 @@ main {
 
 .company_project,
 .side_project {
-  margin: 5px;
-  width: 100%;
-  /* 
-  margin-bottom: 15px;
-  */
+  margin: 10px 0px;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #000;
+  color: #000;
 }
 
 tr,
@@ -215,8 +251,8 @@ footer {
   padding: 3px 10px 3px 0px;
 }
 
-.footer_copyright {
-  color: white;
+.footer_email {
+  color: #e5f5e0;
   font-family: "Montserrat";
   font-size: 25px;
   font-weight: 500;
@@ -236,10 +272,11 @@ footer {
 
 .faq {
   position: relative;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 14px;
   overflow: hidden;
   transition: 0.3s ease;
+  color: #83838b;
 }
 
 .faq.active {
@@ -247,7 +284,7 @@ footer {
 }
 
 .faq_question {
-  padding: 14px;
+  padding: 15px;
 }
 
 .faq_title {
@@ -255,15 +292,26 @@ footer {
   font-size: 21px;
 }
 
+.faq:hover {
+  background-color: #679467;
+  color: #e5f5e0;
+  font-weight: 600;
+}
+
 .faq_answer {
   max-height: 0;
-  height: 500px;
+  min-height: 0;
+  /* height: 500px; */
+  background-color: #e5f5e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: auto;
   transition: max-height 0.3s ease-in-out;
 }
 
 .faq.active .faq_answer {
-  max-height: 200px;
+  max-height: 500px;
   border-top: 1px solid silver;
   transition: max-height 0.3s ease-in-out;
 }
@@ -350,9 +398,7 @@ footer {
   }
 
   .introduce_me {
-    color: #83838b;
     font-size: 27px;
-    line-height: 1.2;
   }
 
   .skill_item {
