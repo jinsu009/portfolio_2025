@@ -201,9 +201,10 @@ const createProjectTable = (item) => {
 
   if (item.type === "company") {
     tableClassName = "company_project";
-  } else if (item.type === "side") {
-    tableClassName = "side_project";
   }
+  // else if (item.type === "side") {
+  //   tableClassName = "side_project";
+  // }
 
   retTableTag = document.createElement("table");
   retTableTag.setAttribute("class", tableClassName);
